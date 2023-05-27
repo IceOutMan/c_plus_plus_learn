@@ -17,19 +17,20 @@ public:
   virtual ~Dog();
 };
 
-Dog::Dog()
-{
-    std::cout << "A dog has been constructed\n";
+Dog::Dog() { std::cout << "A dog has been constructed\n"; }
+
+void Dog::setName(const std::string &dogsName) { name = dogsName; }
+
+void Dog::setWeight(int dogsWeight){
+    weight = dogsWeight;
 }
 
-void Dog::setName(const std::string& dogsName)
+void Dog::print() const
 {
-    name = dogsName;
+    std::cout << "Dog is " << name << " and weight "  << weight << "kg\n";
 }
-
 
 int main(int argc, char **argv) {
-
 
   cout << "hello" << endl;
   return 0;
