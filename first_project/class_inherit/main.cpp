@@ -1,4 +1,5 @@
 #include <__memory/allocator_traits.h>
+#include <algorithm>
 #include <iostream>
 #include <xlocale/_stdio.h>
 using namespace std;
@@ -31,6 +32,7 @@ void Dog::print() const {
 
 Dog::~Dog() { std::cout << "Goodbye " << name << '\n'; }
 
+// ============++++++++++++++++++++++++++++++
 class OwnedDog : public Dog {
 public:
   void setOwner(const std::string &dogsOwner);
@@ -42,6 +44,12 @@ private:
 };
 
 void OwnedDog::setOwner(const std::string &dogsOwner) { owner = dogsOwner; }
+
+void OwnedDog::print() const {
+  Dog::print();
+  std::cout << "Dog is owned by " << owner << '\n';
+}
+
 
 int main(int argc, char **argv) {
 
