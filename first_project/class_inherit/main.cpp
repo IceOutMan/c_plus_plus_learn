@@ -53,6 +53,6 @@ void OwnedDog::print() const {
 
 int main(int argc, char **argv) {
 
-  cout << "hello" << endl;
+  cout << "hello class inherit" << endl;
   return 0;
 }

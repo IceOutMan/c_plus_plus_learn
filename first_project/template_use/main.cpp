@@ -1,4 +1,5 @@
-template <class T> 
+#include <iostream>
+template <class T>
 class Box {
 public:
   void insert(const T &) {}
@@ -12,5 +13,6 @@ int main() {
   Box<Box<int> > boxOfBox;
   boxOfBox.insert(intBox);
 
+  std::cout << "hello" << std::endl;
   return 0;
 }
